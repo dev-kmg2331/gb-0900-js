@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div>
+        <span>pr("%",</span><span id="num">5</span><span>);</span>
+    </div>
+    <div>
+        <span>결과 : </span><span id="result"></span>
+    </div>
+</body>
+<script>
+    let num = document.getElementById('num');
+    let result = document.getElementById('result');
+    let count = 0;
+
+    count = parseInt(num.innerHTML);
+
+    function set(char, count, callback) {
+        if (callback) {
+            console.log(callback(char, count));
+            result.innerHTML = callback(char, count);
+            return;
+        }
+
+        result.innerHTML = "";
+    }
+
+    console.log(count);
+
+    set("char", count, (char, count) => {
+        var per = "";
+
+        for (let index = 0; index < count; index++) {
+            per += char;
+            console.log(per);
+        }
+
+        return per;
+    });
+
+</script>
+
+</html>
