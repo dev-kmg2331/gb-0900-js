@@ -1,6 +1,6 @@
 /* JS에서는 오버로딩을 지원하지 않는다. */
-console.log(add(1, 3));
-console.log(add(1, 3, 5 /* , "강민구" */));
+console.log(add("덧셈", 1, 3));
+console.log(add("덧셈", 1, 3, 5 /* , "강민구" */));
 // function add(num1, num2, num3) {
 //     return num1 + num2 + num3;
 // }
@@ -8,12 +8,14 @@ console.log(add(1, 3, 5 /* , "강민구" */));
 // function add(num1, num2) {
 //     return num1 + num2;
 // }
-function add( /* name,  */) {
-    var nums = [];
-    for (var _i = 0; _i < arguments.length; _i++) {
-        nums[_i] = arguments[_i];
+function add(name, ...nums) {
+    let result = 0;
+    // nums.forEach(n => result += n);
+
+    for (let index = 0; index < nums.length; index++) {
+        result += nums[index];
+        
     }
-    var result = 0;
-    nums.forEach(function (n) { return result += n; });
-    return result;
+
+    return name + result;
 }

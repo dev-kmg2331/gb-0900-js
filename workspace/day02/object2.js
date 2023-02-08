@@ -19,21 +19,24 @@
 // 3명은 기차 한 대에 모두 탑승한다.
 // 기차 객체를 만들고 각 손님들을 프로퍼티로 선언한다.
 
-let user = {
-    name: "",
-    age: 0,
-    rank: 0
-};
-
 let train = {}
+let user;
+let index = 1;
 
-function aboard(name, age, rank) {
-    user.name = name;
-    user.age = age;
-    user.rank = rank;
+function aboard(name, age, rank, callback) {
+    user = new User(name, age, rank);
 
-    train[name] = user;
+    train[`passanger${index}`] = user;
+
+    index++;
 };
+
+/* this : 해당 프로토타입을 호출한 객체 */
+function User(name, age, rank) {
+    this.name = name;
+    this.age = age;
+    this.rank = rank;
+}
 
 aboard("홍길동", 20, 1);
 aboard("이순신", 40, 2);

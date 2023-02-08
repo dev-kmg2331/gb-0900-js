@@ -24,5 +24,4 @@ function f() {
     console.log(i);
 }
 
-f();
 
