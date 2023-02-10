@@ -29,7 +29,7 @@ function getAverage(arrJSON, callback) {
 
 console.log(getAverage(animalArrJSON, (arr) => {
 
-    var total = arr./* map(e => e.age). */reduce((total, curVal) => {
+    var total = arr.map(e => e.age).reduce((total, curVal) => {
         return total + curVal;
     });
 

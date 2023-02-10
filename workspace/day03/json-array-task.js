@@ -40,7 +40,6 @@ function getTotalPrice(productArrJSON, callback) {
 
 getTotalPrice(productArrJSON, (arr) => {
 
-
     file.writeFile('shop.json', arr, 'utf-8', (e) => { if (e) { console.log(e) } })
 });
 
@@ -52,7 +51,6 @@ var temp = {
 
 function readJSON() {
     var file = require('fs');
-
 
     file.readFile('shop.json', 'utf-8', (e, content) => {
 

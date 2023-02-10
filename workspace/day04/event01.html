@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>클릭 이벤트</title>
+    <style>
+        input[type=button] {
+            padding: 12px;
+            font-size: 16px;
+        }
+    </style>
+</head>
+
+<body>
+    <h3>CSS 스타일 동적 변경</h3>
+    <hr>
+    <p>클릭하세요</p>
+    <!-- <button type="button">힝 속았징!</button> -->
+    <input type="button" value="힝 속았징!">
+</body>
+<script>
+    const bt = document.querySelector("input[type=button]");
+    const p = document.querySelector("p");
+    bt.addEventListener("click", function () {
+        this.style.background = "skyblue";
+        p.style.fontSize = "30px";
+        p.style.border = "1px solid black";
+        p.style.width = "40vw";
+        p.style.margin = "0 auto";
+        p.style.textAlign = "center"; // 부모 요소가 아닌 브라우저 기준의 %
+    });
+</script>
+
+</html>
