@@ -1,0 +1,56 @@
+body,
+div, h2 {
+    margin: 0;
+    padding: 0;
+    font-weight: 700;
+}
+
+.table {
+    border: 2px solid black;
+    margin: 0 auto;
+    border-collapse: collapse;
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.table tr:nth-child(1) {
+    background-color: bisque;
+}
+
+.table caption {
+    padding: 15px 0;
+}
+
+th,
+td {
+    border: 1px solid black;
+    text-align: center;
+    padding: 5px 120px;
+}
+
+tr th:nth-child(1),
+tr td:nth-child(1) {
+    padding: 5px 90px;
+}
+
+form.form {
+    width: 25vw;
+    text-align: center;
+    margin: 20px auto;
+}
+
+.form fieldset{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.form input {
+    width: 50%;
+    padding: 5px 30px;
+}
+
+.form button {
+    padding: 3px 12px;
+}
+

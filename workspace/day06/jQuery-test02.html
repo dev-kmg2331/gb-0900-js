@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>jQuery 기초 예제2</title>
+    </head>
+    <body>
+        <ul class="car">
+            <li>벤틀리</li>
+            <li>머스탱</li>
+            <li id="lambo">람보르기니</li>
+        </ul>
+    </body>
+    <script src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
+    <script>
+        const $lists = $("li");
+        const $ul = $("ul.car");
+        const $lambo = $("li#lambo");
+
+        console.log($ul.find("li#lambo").text());
+        console.log($ul.closest("body").css('background-color', 'orange'));
+        console.log($lambo.prev());
+        console.log($lambo.next());
+
+        // $ul.children().first().text("페라리");
+        // $ul.parent().css('background-color', 'green');
+
+        // console.log($($ul.children()[2]));
+        // console.log($ul.children().last());
+        // console.log($ul.children().eq(2));
+
+        // $ul.children().last().remove();
+        // $ul.append("<li>소나타 하이브리드</li>");
+
+        // console.log($ul.attr('class', 'super-car'));
+    </script>
+</html>

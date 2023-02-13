@@ -1,0 +1,68 @@
+div,
+body,
+span {
+    margin: 0;
+    padding: 0;
+}
+
+fieldset {
+    position: relative;
+    width: 40vw;
+    text-align: center;
+    margin: 0 auto;
+    border-left: none;
+    border-bottom: none;
+    border-right: none;
+    border-top: 10px dashed rgb(201, 38, 201);
+}
+
+fieldset legend {
+    font-size: 19px;
+    padding: 20px 0;
+}
+
+fieldset hr {
+    width: 65%;
+}
+
+span.result {
+    font-size: 20px;
+    font-weight: 700;
+}
+
+form input.input {
+    border: none;
+    outline: none;
+    text-align: center;
+    padding: 80px 0 0;
+}
+
+form hr {
+    margin: 3px auto 1px;
+    border: 2px solid black;
+}
+
+form input.change {
+    font-size: 40px;
+    font-weight: 700;
+    background-color: rgb(201, 38, 201);
+    color: white;
+    letter-spacing: -2px;
+    padding: 0 30px 10px;
+}
+
+div.circle {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: -80px;
+    left: -40px;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background-color: yellow;
+    border: 5px solid rgb(201, 38, 201);
+    font-size: 50px;
+    font-weight: 700;
+}
